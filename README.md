@@ -1,12 +1,11 @@
 # Combi
-
-[![Build Status](https://img.shields.io/travis/krismuniz/combi.svg?style=flat-square)](http://travis-ci.org/krismuniz/combi) [![Coverage Status](https://img.shields.io/coveralls/krismuniz/combi.svg?style=flat-square)](https://coveralls.io/github/krismuniz/combi?branch=master) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![npm](https://img.shields.io/npm/v/combi.svg?style=flat-square)](https://npm.im/combi) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![Build Status](https://img.shields.io/travis/krismuniz/combi.svg?style=flat-square)](http://travis-ci.org/krismuniz/combi) [![Coverage Status](https://img.shields.io/coveralls/krismuniz/combi.svg?style=flat-square)](https://coveralls.io/github/krismuniz/combi?branch=master)
 
 ⌨️ A tiny keyboard shortcut handling library.
 
 #### Features
 
-- **Pocket-sized** – library size is 400 bytes (~250 bytes gzipped!)
+- **Pocket-sized** – library size is less than 600 bytes (~350 bytes gzipped!)
 - **Minimal** – pass a `callback` function `=>` get results.
 - **Specialized** – only handles key combinations with at least one or more [modifier keys](#supported-modifiers) pressed and at most one regular key ([read more](#considerations))
 - **Framework-agnostic** – can be plugged on any standard `KeyboardEvent` listener (`keyup`, `keydown`, `keypress`, etc.)
@@ -16,6 +15,11 @@
 - Declaratively listen for shortcut events
 - Key combination input field for user-friendly shortcut configuration
 - Handle simple or complex shortcut UIs with a standardized format
+
+#### Bundle Sizes
+
+[![minizipped size](https://img.shields.io/bundlephobia/min/combi.svg?style=flat-square)](https://npm.im/combi)
+[![minizipped size](https://img.shields.io/bundlephobia/minzip/combi.svg?style=flat-square)](https://npm.im/combi)
 
 **Example**
 
