@@ -1,0 +1,50 @@
+{
+  "name": "combi",
+  "version": "1.0.0",
+  "description": "A tiny keyboard shortcut handling library",
+  "source": "src/index.js",
+  "module": "dist/combi.es.js",
+  "main": "dist/combi.js",
+  "umd:main": "dist/combi.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/krismuniz/combi.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "1.0.0-rc.2",
+    "cross-var": "^1.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "microbundle": "^0.7.0",
+    "nyc": "^13.1.0"
+  },
+  "scripts": {
+    "start": "echo 'Sup!'",
+    "build": "microbundle",
+    "lint": "eslint src test",
+    "test": "npm run lint && nyc ava ./test/*.js",
+    "prepare": "npm run -s build",
+    "release": "cross-var npm run test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "key",
+    "keys",
+    "keyboard",
+    "shortcuts",
+    "handler",
+    "modifier",
+    "combination",
+    "code"
+  ],
+  "author": "Kristian Muñiz <contact@krismuniz.com> (http://www.krismuniz.com)",
+  "license": "MIT"
+}
