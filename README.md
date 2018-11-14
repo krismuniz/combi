@@ -1,6 +1,6 @@
 # Combi
 
-[![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Build Status](https://img.shields.io/travis/krismuniz/combi.svg?style=flat-square)](http://travis-ci.org/krismuniz/combi) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 ⌨️ A tiny keyboard shortcut handling library.
 
