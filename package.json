@@ -1,6 +1,6 @@
 {
   "name": "combi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny keyboard shortcut handling library",
   "source": "src/index.js",
   "module": "dist/combi.es.js",
