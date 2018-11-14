@@ -24,7 +24,7 @@
     "nyc": "^13.1.0"
   },
   "scripts": {
-    "start": "echo 'Sup!'",
+    "start": "echo 'https://github.com/krismuniz/combi'",
     "build": "microbundle",
     "lint": "eslint src test",
     "test": "npm run lint && nyc ava ./test/*.js",
