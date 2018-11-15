@@ -58,7 +58,7 @@ test('detects correct shortcut when all modifiers and a letter', (t) => {
       shortcut,
       event
     }) => {
-      t.is(shortcut, 'control+alt+shift+meta+z')
+      t.is(shortcut, 'ctrl+alt+shift+meta+z')
       t.deepEqual(event, keyEvent)
     }
   })
@@ -119,7 +119,7 @@ test('always calls .preventDefault() when second argument is true', (t) => {
   combi(() => {}, true)(keyEventB)
 })
 
-test('detects correct shortcut: control+alt+shift+meta+0', (t) => {
+test('detects correct shortcut: ctrl+alt+shift+meta+0', (t) => {
   const keyEvent = keyboardEvent({
     ctrlKey: true,
     altKey: true,
@@ -140,7 +140,7 @@ test('detects correct shortcut: control+alt+shift+meta+0', (t) => {
     shortcut,
     event
   }) => {
-    t.is(shortcut, 'control+alt+shift+meta+0')
+    t.is(shortcut, 'ctrl+alt+shift+meta+0')
     t.deepEqual(event, keyEvent)
   })
 })

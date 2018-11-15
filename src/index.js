@@ -7,7 +7,7 @@ export default function (cb, preventDefault = false) {
     if (preventDefault !== false) e.preventDefault()
 
     let keys = [
-      e.ctrlKey ? 'control' : undefined,
+      e.ctrlKey ? 'ctrl' : undefined,
       e.altKey ? 'alt' : undefined,
       e.shiftKey ? 'shift' : undefined,
       e.metaKey ? 'meta' : undefined,
