@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Combi – Demo</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="/normalize.css" />
+  <style>
+    body {
+      background: #111E33;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 48px;
+    }
+
+    .navbar .navbar-brand {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 16px;
+    }
+
+    .shortcut-viewer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .shortcut-text {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    code {
+      border-radius: 4px;
+    }
+  </style>
+  <script type="text/javascript" src="https://unpkg.com/combi/dist/combi.umd.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="/">
+      ← Examples
+    </a>
+  </nav>
+  <div class="shortcut-viewer">
+    <div class="shortcut-text"></div>
+    <div class="instructions">Type any shortcut.</div>
+    <pre><code class="javascript">const shortcutListener = combi((shortcut) => {
+  $('.shortcut-text').innerText = shortcut
+})
+
+window.addEventListener('keydown', shortcutListener)</code></pre>
+    
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      hljs.initHighlightingOnLoad()
+
+      const $ = (q) => document.querySelector(q)
+
+      const shortcutListener = combi((shortcut) => {
+        $('.shortcut-text').innerText = shortcut
+      })
+
+      window.addEventListener('keydown', shortcutListener)
+      window.addEventListener('keyup', (shortcutListener) => {
+        $('.shortcut-text').innerText = ''
+      })
+    })
+  </script>
+</body>
+
+</html>

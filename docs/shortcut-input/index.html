@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Combi – Demo</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="/normalize.css" />
+  <style>
+    body {
+      background: #111E33;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 48px;
+    }
+
+    .navbar .navbar-brand {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 16px;
+    }
+
+    .shortcut-viewer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .shortcut-input {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 6px;
+      background: rgba(200,200,200,0.8);
+      outline: none;
+    }
+
+    .shortcut-input:focus {
+      background: white;
+    }
+
+    code {
+      border-radius: 4px;
+    }
+  </style>
+  <script type="text/javascript" src="https://unpkg.com/combi/dist/combi.umd.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="/">
+      ← Examples
+    </a>
+  </nav>
+  <div class="shortcut-viewer">
+    <input type="text" class="shortcut-input" />
+    <div class="instructions">Type a shortcut while focusing the input field above.</div>
+    <pre><code class="javascript">const shortcutListener = combi((shortcut) => {
+  $('.shortcut-input').value = shortcut
+}, true)
+
+$('.shortcut-input').addEventListener('keydown', shortcutListener)</code></pre>
+    
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      hljs.initHighlightingOnLoad()
+
+      const $ = (q) => document.querySelector(q)
+
+      const shortcutListener = combi((shortcut) => {
+        $('.shortcut-input').value = ''
+        $('.shortcut-input').value = shortcut
+      }, true)
+
+      $('.shortcut-input').addEventListener('keydown', shortcutListener)
+    })
+  </script>
+</body>
+
+</html>
