@@ -122,7 +122,7 @@ inputElement.addEventListener('keydown', onShortcut)
 #### combi(callback, [preventDefault])
 
 ```
-combi(callback: Function [, preventDefault: Boolean])
+combi(callback: Function, preventDefault?: Boolean)
 ```
 
 ##### callback `{Function}`
