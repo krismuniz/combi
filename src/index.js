@@ -1,6 +1,6 @@
 export default function (cb, preventDefault = false) {
   return (e) => {
-    if (!e) return false
+    if (!e) return
     if (preventDefault) e.preventDefault()
 
     let combo = [
@@ -8,7 +8,7 @@ export default function (cb, preventDefault = false) {
       e.altKey ? 'alt' : undefined,
       e.shiftKey ? 'shift' : undefined,
       e.metaKey ? 'meta' : undefined,
-      ['Shift', 'Meta', 'Control', 'Option', 'Alt'].includes(e.key) ? undefined : e.code.replace(/Key|Digit/, '')
+      ['Shift', 'Meta', 'Control', 'Option', 'Alt'].indexOf(e.key) >= 0 ? undefined : e.code.replace(/Key|Digit/, '')
     ].filter(Boolean)
 
     if (combo.length >= 2) {

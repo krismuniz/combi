@@ -31,7 +31,7 @@ test('can be instantiated properly', (t) => {
   t.not(combi, undefined)
   t.is(typeof combi, 'function')
   t.is(typeof combi(), 'function')
-  t.is(combi()(), false)
+  t.is(combi()(), undefined)
   t.is(combi()(keyEvent), undefined)
 })
 

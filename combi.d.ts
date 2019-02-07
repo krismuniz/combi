@@ -1,7 +1,2 @@
-export type Callback = (shortcut: string, event: KeyboardEvent) => void;
-
-export type EventHandler = (event: KeyboardEvent) => void;
-
-declare const combi: (callback: Callback, preventDefault?: boolean) => EventHandler;
-
-export default combi;
+export declare type Callback = (shortcut: string, event: KeyboardEvent) => void;
+export default function (cb: Callback, preventDefault?: boolean): (e: KeyboardEvent) => void;
