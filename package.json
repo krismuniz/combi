@@ -1,6 +1,6 @@
 {
   "name": "combi",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A tiny keyboard shortcut handling library",
   "source": "src/index.js",
   "module": "dist/combi.es.js",
@@ -34,6 +34,7 @@
     "release": "cross-var npm run test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "files": [
+    "*.d.ts",
     "src",
     "dist"
   ],
