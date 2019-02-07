@@ -66,6 +66,8 @@ You can find the library on `window.combi`
 
 `combi` takes a handler function as an argument. This handler function should take two arguments. The first one: the keyboard shortcut that has been pressed. The second one: the original keyboard event. You can match these shortcuts however you want.
 
+[See it in action](https://projects.krismuniz.com/combi/global-shortcuts/)
+
 ```js
 import combi from 'combi'
 
@@ -97,6 +99,8 @@ window.addEventListener('keydown', onShortcut)
 
 You can use `combi` to create custom input fields for specifying key combinations. Useful when building apps with configurable keyboard shortcuts.
 
+[See it in action](https://projects.krismuniz.com/combi/shortcut-input/)
+
 ```js
 import combi from 'combi'
 
@@ -118,7 +122,7 @@ inputElement.addEventListener('keydown', onShortcut)
 #### combi(callback, [preventDefault])
 
 ```
-combi(callback: Function [, preventDefault: Boolean])
+combi(callback: Function, preventDefault?: Boolean)
 ```
 
 ##### callback `{Function}`
