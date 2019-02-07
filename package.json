@@ -6,6 +6,7 @@
   "module": "dist/combi.es.js",
   "main": "dist/combi.js",
   "umd:main": "dist/combi.umd.js",
+  "types": "combi.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/krismuniz/combi.git"
