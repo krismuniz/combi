@@ -1,5 +1,5 @@
 # Combi
-[![npm](https://img.shields.io/npm/v/combi.svg?style=flat-square)](https://npm.im/combi) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![Build Status](https://img.shields.io/travis/krismuniz/combi.svg?style=flat-square)](http://travis-ci.org/krismuniz/combi) [![Coverage Status](https://img.shields.io/coveralls/krismuniz/combi.svg?style=flat-square)](https://coveralls.io/github/krismuniz/combi?branch=master) ![Type Declarations](https://img.shields.io/npm/types/combi.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/combi.svg?style=flat-square)](https://npm.im/combi) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/krismuniz/combi/build?logo=github&style=flat-square) [![Build Status](https://img.shields.io/travis/krismuniz/combi.svg?style=flat-square)](http://travis-ci.org/krismuniz/combi) [![Coverage Status](https://img.shields.io/coveralls/krismuniz/combi.svg?style=flat-square)](https://coveralls.io/github/krismuniz/combi?branch=master) ![Type Declarations](https://img.shields.io/npm/types/combi.svg?style=flat-square)
 
 ⌨️ A tiny keyboard shortcut handling library.
 
