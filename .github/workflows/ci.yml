@@ -11,17 +11,18 @@ jobs:
         with:
           node-version: 12
 
-      - run: node --version
-      - run: npm --version
+      - name: List Versions
+        run: |
+          node --version
+          npm --version
 
       - name: Install Dependencies
         run: npm ci
 
-      - name: Run Tests
-        run: npm test
-
-      - name: Run Lint
-        run: npm run lint
+      - name: Run Tests & Lint
+        run: |
+          npm test
+          npm run lint
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
