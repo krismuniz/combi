@@ -29,7 +29,7 @@
     "start": "echo 'https://github.com/krismuniz/combi'",
     "build": "microbundle",
     "lint": "eslint src test",
-    "test": "npm run lint && nyc ava ./test/*.js",
+    "test": "npm run lint && nyc --reporter=lcov --reporter=text ava ./test/*.js",
     "prepare": "npm run -s build",
     "release": "cross-var npm run test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
