@@ -10,7 +10,20 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm test
-      - run: npm run lint
-      - run: npx report --reporter=text-lcov | npx coveralls
+
+      - run: node --version
+      - run: npm --version
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
