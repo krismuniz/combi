@@ -3,7 +3,7 @@ export default function (cb, preventDefault = false) {
     if (!e) return
     if (preventDefault) e.preventDefault()
 
-    let combo = [
+    const combo = [
       e.ctrlKey ? 'ctrl' : undefined,
       e.altKey ? 'alt' : undefined,
       e.shiftKey ? 'shift' : undefined,
